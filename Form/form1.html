@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <!-- 
+        form : 웹 서버에 정보를 제출하기 위한 양식 범위를 정의
+            action : form 안에 정보들을 어디로 전송할 것인가(url{절대, 상대})
+                    -action 을 쓰지 않았다면 현재 페이지 경로가 그대로 쓰임 
+            method : 서버로 전송할 http 방식 (get/post)
+                    get(기본) - 주소줄에 특정 값들이 따라다님
+                            Ex) 검색 https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=%EC%98%81%ED%99%94
+                    post - 전송된 값들이 감춰짐
+                            Ex)로그인 회원가입
+
+        폼 요소
+        1) input 태그
+         (1) text : 한줄 짜리 텍스트 입력용
+         (2) radio
+         (3) checkbox
+         (4) submit : 폼 서버로 전송
+         (5) reset
+         (6) button
+         (7) password
+         
+         전역속성 : 모든 태그에 사용할 수 있는 속성
+            class, id ,name, data-* 
+            id: 현재 페이지에서 값을 중복 x
+      -->
+
+    <form action="" method="get">
+      <div>
+        <label for="First name">First name:</label>
+      </div>
+      <div><input type="text" name="First name" id="First name" /></div>
+      <div><label for="Last name">Last name:</label></div>
+      <div><input type="text" name="Last name" id="Last name" /></div>
+
+      <div>
+        <input type="submit" value="login" />
+        <!--http://192.168.0.74:5500/Form/form1.html?First+name=asdf&Last+name=asdf
+             action 주소 ? key= value & ley=value
+             key : input 요소의 name 값
+             value : 사용자 입력값
+            -->
+      </div>
+    </form>
+  </body>
+</html>
+
+<!-- 
+    네이버    https://www.naver.com/
+    검색 영화    https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=%EC%98%81%ED%99%94
+ -->
